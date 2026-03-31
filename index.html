@@ -10,40 +10,38 @@
        CSS VARIABLES & RESET
     =========================== */
     :root {
-      --green-deep:   #1a3d2b;
-      --green-mid:    #2d6a4f;
-      --green-light:  #52b788;
-      --green-pale:   #d8f3dc;
-      --blue-deep:    #0d2137;
-      --blue-mid:     #1a4a6b;
-      --blue-light:   #48cae4;
-      --gold:         #c9a84c;
-      --gold-pale:    #f5e6c0;
-      --white:        #fdfefe;
-      --off-white:    #f7f9f8;
-      --text-main:    #1c2b22;
-      --text-muted:   #5a7367;
-      --card-bg:      #ffffff;
-      --header-bg:    rgba(253,254,254,0.9);
-      --shadow:       0 8px 40px rgba(26,61,43,0.12);
-      --shadow-lg:    0 20px 60px rgba(26,61,43,0.18);
-      --radius:       18px;
-      --transition:   0.4s cubic-bezier(0.25,0.8,0.25,1);
+      --green-deep: #1a3d2b;
+      --green-mid: #2d6a4f;
+      --green-light: #52b788;
+      --green-pale: #d8f3dc;
+      --blue-deep: #0d2137;
+      --blue-mid: #1a4a6b;
+      --blue-light: #48cae4;
+      --gold: #c9a84c;
+      --gold-pale: #f5e6c0;
+      --white: #fdfefe;
+      --off-white: #f7f9f8;
+      --text-main: #1c2b22;
+      --text-muted: #5a7367;
+      --card-bg: #ffffff;
+      --header-bg: rgba(253,254,254,0.9);
+      --shadow: 0 8px 40px rgba(26,61,43,0.12);
+      --shadow-lg: 0 20px 60px rgba(26,61,43,0.18);
+      --radius: 18px;
+      --transition: 0.4s cubic-bezier(0.25,0.8,0.25,1);
     }
-
     [data-theme="dark"] {
-      --white:        #0d1f17;
-      --off-white:    #111f18;
-      --text-main:    #e8f5ec;
-      --text-muted:   #8ebfa3;
-      --card-bg:      #162a1e;
-      --header-bg:    rgba(13,31,23,0.92);
-      --shadow:       0 8px 40px rgba(0,0,0,0.4);
-      --shadow-lg:    0 20px 60px rgba(0,0,0,0.5);
-      --green-pale:   #1a3d2b;
-      --gold-pale:    #2a2210;
+      --white: #0d1f17;
+      --off-white: #111f18;
+      --text-main: #e8f5ec;
+      --text-muted: #8ebfa3;
+      --card-bg: #162a1e;
+      --header-bg: rgba(13,31,23,0.92);
+      --shadow: 0 8px 40px rgba(0,0,0,0.4);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
+      --green-pale: #1a3d2b;
+      --gold-pale: #2a2210;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body {
@@ -56,14 +54,12 @@
     img { display: block; max-width: 100%; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
-
     /* ===========================
        SCROLLBAR
     =========================== */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--white); }
     ::-webkit-scrollbar-thumb { background: var(--green-light); border-radius: 3px; }
-
     /* ===========================
        HEADER / NAV
     =========================== */
@@ -75,13 +71,11 @@
       transition: background var(--transition), box-shadow var(--transition);
     }
     #header.scrolled { box-shadow: var(--shadow); }
-
     .nav-inner {
       max-width: 1200px; margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 2rem; height: 68px;
     }
-
     .logo {
       display: flex; align-items: center; gap: 10px;
       font-family: 'Cormorant Garamond', serif;
@@ -90,7 +84,6 @@
     }
     [data-theme="dark"] .logo { color: var(--green-light); }
     .logo-icon { font-size: 1.7rem; }
-
     .nav-links {
       display: flex; gap: 2rem; align-items: center;
     }
@@ -108,9 +101,7 @@
     }
     .nav-links a:hover { color: var(--green-mid); }
     .nav-links a:hover::after { width: 100%; }
-
     .nav-actions { display: flex; align-items: center; gap: 0.8rem; }
-
     /* Dark mode toggle */
     .theme-btn {
       width: 40px; height: 40px; border-radius: 50%; border: none;
@@ -119,7 +110,6 @@
       font-size: 1.1rem; transition: background 0.3s, transform 0.3s;
     }
     .theme-btn:hover { transform: rotate(20deg); background: var(--gold-pale); }
-
     /* Hamburger */
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
@@ -133,7 +123,6 @@
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
     /* Mobile menu */
     .mobile-menu {
       display: none; position: fixed; top: 68px; left: 0; width: 100%;
@@ -150,7 +139,6 @@
       font-size: 1rem; font-weight: 500; color: var(--text-main);
       border-bottom: 1px solid rgba(82,183,136,0.15); padding-bottom: 0.8rem;
     }
-
     /* ===========================
        HERO SECTION
     =========================== */
@@ -160,7 +148,6 @@
       display: flex; align-items: center; justify-content: center;
       overflow: hidden;
     }
-
     .hero-bg {
       position: absolute; inset: 0; z-index: 0;
       /* Gradient landscape representing Núi Bà Đen */
@@ -175,13 +162,11 @@
       transform: scale(1.05);
       transition: transform 0.1s linear;
     }
-
     /* Decorative mountain silhouette */
     .hero-mountain {
       position: absolute; bottom: 0; left: 0; width: 100%; z-index: 1;
     }
     .hero-mountain svg { width: 100%; height: auto; display: block; }
-
     /* Stars / particles */
     .hero-stars {
       position: absolute; inset: 0; z-index: 1;
@@ -196,12 +181,10 @@
         radial-gradient(1px 1px at 55% 30%, rgba(255,255,255,0.4) 0%, transparent 100%),
         radial-gradient(2px 2px at 80% 25%, rgba(255,255,255,0.3) 0%, transparent 100%);
     }
-
     .hero-content {
       position: relative; z-index: 2; text-align: center;
       padding: 0 1.5rem; max-width: 800px;
     }
-
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(201,168,76,0.2);
@@ -211,7 +194,6 @@
       font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem;
       animation: fadeSlideDown 1s 0.2s both;
     }
-
     .hero-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3rem, 8vw, 6rem);
@@ -224,14 +206,12 @@
     .hero-title em {
       font-style: italic; color: var(--gold); display: block;
     }
-
     .hero-sub {
       font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 300;
       color: rgba(255,255,255,0.7); margin: 1.2rem 0 2.4rem;
       animation: fadeSlideUp 1s 0.6s both;
       letter-spacing: 0.02em; line-height: 1.7;
     }
-
     .hero-cta {
       display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
       animation: fadeSlideUp 1s 0.8s both;
@@ -252,7 +232,6 @@
     }
     .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(201,168,76,0.45); }
     .btn-primary:hover::before { transform: translateX(0); }
-
     .btn-outline {
       padding: 0.85rem 2.4rem; border-radius: 50px;
       background: transparent;
@@ -266,7 +245,6 @@
       border-color: rgba(255,255,255,0.7);
       transform: translateY(-3px);
     }
-
     /* Scroll indicator */
     .scroll-indicator {
       position: absolute; bottom: 2.5rem; left: 50%;
@@ -287,7 +265,6 @@
       0%,100% { transform: scaleY(1); opacity: 0.6; }
       50% { transform: scaleY(0.6); opacity: 0.2; }
     }
-
     /* ===========================
        STATS / COUNTER SECTION
     =========================== */
@@ -310,7 +287,6 @@
       font-size: 0.78rem; color: rgba(255,255,255,0.6);
       letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.5rem;
     }
-
     /* ===========================
        ABOUT SECTION
     =========================== */
@@ -319,7 +295,6 @@
       background: var(--off-white);
     }
     .section-inner { max-width: 1100px; margin: 0 auto; }
-
     .section-label {
       font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: var(--green-light); font-weight: 600; margin-bottom: 0.8rem;
@@ -335,7 +310,6 @@
       color: var(--text-main); margin-bottom: 1.5rem;
     }
     .section-title em { font-style: italic; color: var(--green-mid); }
-
     .about-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
       align-items: center; margin-top: 3rem;
@@ -362,7 +336,6 @@
     }
     .highlight-text strong { font-size: 0.92rem; color: var(--text-main); display: block; }
     .highlight-text span { font-size: 0.78rem; color: var(--text-muted); }
-
     .about-visual {
       position: relative;
     }
@@ -407,7 +380,6 @@
     }
     .about-tag strong { font-size: 1.8rem; font-family: 'Cormorant Garamond', serif; display: block; }
     .about-tag span { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
-
     /* ===========================
        EXPLORE / FEATURES
     =========================== */
@@ -416,7 +388,6 @@
       background: var(--white);
     }
     .explore-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
-
     .features-grid {
       max-width: 1100px; margin: 0 auto;
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
@@ -430,13 +401,11 @@
     }
     .feature-card:first-child { grid-row: span 2; aspect-ratio: unset; }
     .feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-
     .feature-bg {
       position: absolute; inset: 0;
       transition: transform 0.5s;
     }
     .feature-card:hover .feature-bg { transform: scale(1.06); }
-
     /* Individual card backgrounds */
     .feature-card:nth-child(1) .feature-bg {
       background: linear-gradient(160deg, #1a4a6b 0%, #0d2137 100%);
@@ -450,7 +419,6 @@
     .feature-card:nth-child(4) .feature-bg {
       background: linear-gradient(160deg, #1a3d2b 0%, #2d6a4f 60%, #48cae4 100%);
     }
-
     /* Visual elements within each card */
     .feature-card:nth-child(1) .feature-bg::after {
       content: '🚡'; position: absolute; right: 10%; top: 15%;
@@ -468,7 +436,6 @@
       content: '🌅'; position: absolute; right: 8%; top: 20%;
       font-size: 4rem; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
     }
-
     .feature-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
@@ -493,7 +460,6 @@
       max-width: 280px;
     }
     .feature-card:first-child .feature-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
-
     /* ===========================
        TIMELINE / HISTORY
     =========================== */
@@ -506,12 +472,10 @@
       content: ''; position: absolute; inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d6a4f' fill-opacity='0.2'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
     }
-
     .history-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
     #history .section-title { color: #fff; }
     #history .section-label { color: var(--gold); }
     #history .section-label::before { background: var(--gold); }
-
     .timeline {
       position: relative; margin-top: 4rem; padding-left: 3rem;
     }
@@ -520,14 +484,12 @@
       width: 1.5px; height: 100%;
       background: linear-gradient(to bottom, var(--gold), transparent);
     }
-
     .timeline-item {
       position: relative; margin-bottom: 3rem; opacity: 0;
       transform: translateX(-20px);
       transition: opacity 0.6s, transform 0.6s;
     }
     .timeline-item.visible { opacity: 1; transform: translateX(0); }
-
     .timeline-dot {
       position: absolute; left: -3rem; top: 6px;
       width: 20px; height: 20px; border-radius: 50%;
@@ -547,7 +509,6 @@
       font-size: 0.9rem; color: rgba(255,255,255,0.6);
       line-height: 1.7; font-weight: 300;
     }
-
     /* ===========================
        GALLERY
     =========================== */
@@ -556,7 +517,6 @@
       background: var(--off-white);
     }
     .gallery-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
-
     /* Slider */
     .slider-wrap {
       max-width: 1100px; margin: 0 auto;
@@ -601,7 +561,6 @@
       font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 400;
     }
     .slide-caption p { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.3rem; }
-
     .slider-controls {
       display: flex; justify-content: center; align-items: center;
       gap: 1rem; margin-top: 1.5rem;
@@ -621,7 +580,6 @@
       transition: background 0.3s, transform 0.3s;
     }
     .slider-dot.active { background: var(--green-light); transform: scale(1.3); }
-
     /* Gallery grid */
     .gallery-grid {
       max-width: 1100px; margin: 4rem auto 0;
@@ -645,7 +603,6 @@
     .gallery-card:nth-child(4) .gallery-card-inner { background: linear-gradient(135deg, #4a2c0a, #c9a84c); }
     .gallery-card:nth-child(5) .gallery-card-inner { background: linear-gradient(135deg, #1a3d2b, #48cae4); }
     .gallery-card:nth-child(6) .gallery-card-inner { background: linear-gradient(135deg, #0d2137, #2d6a4f); }
-
     .gallery-card-emoji {
       position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
       font-size: 3.5rem;
@@ -661,7 +618,6 @@
       color: #fff; font-size: 0.85rem; letter-spacing: 0.1em;
       text-transform: uppercase; font-weight: 500;
     }
-
     /* ===========================
        WEATHER SECTION
     =========================== */
@@ -671,7 +627,6 @@
     }
     .weather-inner { max-width: 900px; margin: 0 auto; }
     .weather-header { text-align: center; margin-bottom: 3rem; }
-
     .weather-card {
       background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 60%, var(--green-deep) 100%);
       border-radius: 24px; padding: 3rem;
@@ -683,7 +638,6 @@
       width: 300px; height: 300px; border-radius: 50%;
       background: radial-gradient(circle, rgba(72,202,228,0.15), transparent);
     }
-
     .weather-top {
       display: flex; align-items: flex-start; justify-content: space-between;
       margin-bottom: 2.5rem;
@@ -697,7 +651,6 @@
       color: #fff; line-height: 1;
     }
     .weather-temp sup { font-size: 2rem; vertical-align: super; }
-
     .weather-details {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
     }
@@ -709,7 +662,6 @@
     .weather-detail-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
     .weather-detail-value { font-size: 1.1rem; font-weight: 600; color: #fff; }
     .weather-detail-label { font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-top: 0.2rem; letter-spacing: 0.06em; }
-
     .weather-forecast {
       display: flex; gap: 1rem; margin-top: 2rem; overflow-x: auto; padding-bottom: 0.5rem;
     }
@@ -721,7 +673,6 @@
     .forecast-day { font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.08em; }
     .forecast-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
     .forecast-temp { font-size: 0.9rem; color: #fff; font-weight: 500; }
-
     /* ===========================
        POPUP
     =========================== */
@@ -733,7 +684,6 @@
       transition: opacity 0.35s;
     }
     .popup-overlay.open { opacity: 1; pointer-events: all; }
-
     .popup-box {
       background: var(--card-bg); border-radius: 24px;
       max-width: 500px; width: 90%;
@@ -743,7 +693,6 @@
       transition: transform 0.35s;
     }
     .popup-overlay.open .popup-box { transform: scale(1) translateY(0); }
-
     .popup-visual {
       width: 100%; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden;
       margin-bottom: 1.5rem; position: relative;
@@ -760,7 +709,6 @@
     .popup-tag { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green-light); font-weight: 600; margin-bottom: 0.5rem; }
     .popup-title { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; margin-bottom: 0.7rem; color: var(--text-main); }
     .popup-body { font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); }
-
     /* ===========================
        CONTACT / CTA SECTION
     =========================== */
@@ -771,7 +719,6 @@
     .contact-inner { max-width: 700px; margin: 0 auto; text-align: center; }
     .contact-inner .section-label { justify-content: center; }
     .contact-inner .section-label::before { display: none; }
-
     .contact-form {
       display: flex; flex-direction: column; gap: 1rem;
       margin-top: 3rem;
@@ -797,7 +744,6 @@
       transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
     }
     .btn-submit:hover { background: var(--green-light); transform: translateY(-3px); box-shadow: 0 14px 36px rgba(45,106,79,0.4); }
-
     /* ===========================
        FOOTER
     =========================== */
@@ -812,7 +758,6 @@
       position: absolute; top: 0; left: 0; width: 100%; height: 2px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
-
     .footer-grid {
       max-width: 1100px; margin: 0 auto;
       display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
@@ -820,7 +765,6 @@
     }
     .footer-brand .logo { margin-bottom: 1.2rem; color: var(--green-light); }
     .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 280px; }
-
     .footer-col h4 {
       color: #fff; font-size: 0.85rem; letter-spacing: 0.1em;
       text-transform: uppercase; margin-bottom: 1.2rem; font-weight: 600;
@@ -828,7 +772,6 @@
     .footer-col ul { display: flex; flex-direction: column; gap: 0.7rem; }
     .footer-col ul li a { font-size: 0.85rem; transition: color 0.3s; }
     .footer-col ul li a:hover { color: var(--green-light); }
-
     .footer-bottom {
       max-width: 1100px; margin: 0 auto;
       padding-top: 2rem;
@@ -837,7 +780,6 @@
       font-size: 0.8rem; flex-wrap: wrap; gap: 0.5rem;
     }
     .footer-bottom span { color: var(--gold); }
-
     /* ===========================
        BACK TO TOP
     =========================== */
@@ -854,17 +796,16 @@
     }
     #back-top.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
     #back-top:hover { background: var(--green-light); transform: translateY(-3px); }
-
     /* ===========================
        ANIMATIONS
     =========================== */
     @keyframes fadeSlideUp {
       from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeSlideDown {
       from { opacity: 0; transform: translateY(-20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeIn {
       from { opacity: 0; } to { opacity: 1; }
@@ -874,7 +815,6 @@
       50% { transform: translateY(-12px); }
     }
     .float-anim { animation: float 4s ease-in-out infinite; }
-
     /* Scroll reveal */
     .reveal {
       opacity: 0; transform: translateY(40px);
@@ -885,13 +825,11 @@
     .reveal-left.visible { opacity: 1; transform: translateX(0); }
     .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s, transform 0.7s; }
     .reveal-right.visible { opacity: 1; transform: translateX(0); }
-
     /* Stagger delays */
     .delay-1 { transition-delay: 0.1s; }
     .delay-2 { transition-delay: 0.2s; }
     .delay-3 { transition-delay: 0.3s; }
     .delay-4 { transition-delay: 0.4s; }
-
     /* ===========================
        RESPONSIVE
     =========================== */
@@ -899,25 +837,18 @@
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .mobile-menu { display: flex; }
-
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       .about-visual { max-width: 400px; }
       .about-card-main { aspect-ratio: 4/3; }
       .about-tag { bottom: -1rem; right: -0.5rem; }
-
       .features-grid { grid-template-columns: 1fr; }
       .feature-card:first-child { grid-row: span 1; aspect-ratio: 16/10; }
-
       .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-
       .weather-details { grid-template-columns: repeat(2, 1fr); }
-
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .footer-brand { grid-column: span 2; }
-
       .form-row { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 600px) {
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -929,7 +860,6 @@
   </style>
 </head>
 <body>
-
 <!-- ===========================
      HEADER
 =========================== -->
@@ -940,7 +870,6 @@
       <span class="logo-icon">⛰️</span>
       Núi Bà Đen
     </a>
-
     <!-- Desktop nav links -->
     <ul class="nav-links">
       <li><a href="#hero">Trang chủ</a></li>
@@ -949,7 +878,6 @@
       <li><a href="#gallery">Thư viện ảnh</a></li>
       <li><a href="#contact">Liên hệ</a></li>
     </ul>
-
     <!-- Actions -->
     <div class="nav-actions">
       <!-- Dark mode toggle -->
@@ -961,7 +889,6 @@
     </div>
   </nav>
 </header>
-
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <a href="#hero" class="mobile-link">Trang chủ</a>
@@ -970,7 +897,6 @@
   <a href="#gallery" class="mobile-link">Thư viện ảnh</a>
   <a href="#contact" class="mobile-link">Liên hệ</a>
 </div>
-
 <!-- ===========================
      HERO SECTION
 =========================== -->
@@ -989,7 +915,6 @@
         fill="var(--white)" />
     </svg>
   </div>
-
   <!-- Hero Content -->
   <div class="hero-content">
     <div class="hero-badge">🌿 Tây Ninh · Việt Nam</div>
@@ -1010,14 +935,12 @@
       </button>
     </div>
   </div>
-
   <!-- Scroll indicator -->
   <div class="scroll-indicator">
     <div class="scroll-line"></div>
     <span>Cuộn xuống</span>
   </div>
 </section>
-
 <!-- ===========================
      STATS COUNTER
 =========================== -->
@@ -1041,7 +964,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===========================
      ABOUT SECTION
 =========================== -->
@@ -1084,7 +1006,6 @@
           </div>
         </div>
       </div>
-
       <!-- Visual side -->
       <div class="about-visual reveal-right">
         <div class="about-card-main">
@@ -1103,7 +1024,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===========================
      EXPLORE / FEATURES
 =========================== -->
@@ -1130,7 +1050,6 @@
         </p>
       </div>
     </div>
-
     <!-- Card 2 – Chùa Bà -->
     <div class="feature-card reveal delay-1" onclick="openPopup('temple')">
       <div class="feature-bg"></div>
@@ -1141,7 +1060,6 @@
         <p class="feature-desc">Ngôi chùa cổ kính hàng trăm năm tuổi, là trái tim tâm linh của núi Bà.</p>
       </div>
     </div>
-
     <!-- Card 3 – Đỉnh núi -->
     <div class="feature-card reveal delay-2" onclick="openPopup('peak')">
       <div class="feature-bg"></div>
@@ -1152,7 +1070,6 @@
         <p class="feature-desc">Từ đỉnh nhìn bao quát đồng bằng Nam Bộ trải dài đến tận chân trời.</p>
       </div>
     </div>
-
     <!-- Card 4 – Hoàng hôn -->
     <div class="feature-card reveal delay-3" onclick="openPopup('sunset')">
       <div class="feature-bg"></div>
@@ -1165,7 +1082,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===========================
      HISTORY TIMELINE
 =========================== -->
@@ -1173,7 +1089,6 @@
   <div class="history-inner">
     <div class="section-label">Lịch sử</div>
     <h2 class="section-title">Hành trình qua<br /><em>ngàn năm</em></h2>
-
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-dot"></div>
@@ -1218,7 +1133,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===========================
      GALLERY
 =========================== -->
@@ -1230,7 +1144,6 @@
       Mỗi góc của Núi Bà Đen đều là một tác phẩm thiên nhiên – hãy cùng khám phá.
     </p>
   </div>
-
   <!-- Auto Slider -->
   <div class="slider-wrap reveal" style="max-width:1100px;margin:0 auto 0;padding:0 1.5rem;">
     <div class="slider-track" id="sliderTrack">
@@ -1274,7 +1187,6 @@
     <div class="slider-dots" id="sliderDots"></div>
     <button class="slider-btn" id="nextBtn">›</button>
   </div>
-
   <!-- Gallery Grid -->
   <div class="gallery-grid" style="padding:0 1.5rem;">
     <div class="gallery-card reveal delay-1" onclick="openPopup('cable')">
@@ -1309,7 +1221,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===========================
      WEATHER
 =========================== -->
@@ -1381,7 +1292,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===========================
      CONTACT
 =========================== -->
@@ -1405,7 +1315,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===========================
      FOOTER
 =========================== -->
@@ -1453,10 +1362,8 @@
     <span style="color:rgba(255,255,255,0.4);">Thiết kế với ❤️ vì thiên nhiên Việt Nam</span>
   </div>
 </footer>
-
 <!-- Back to Top -->
 <button id="back-top" aria-label="Về đầu trang">↑</button>
-
 <!-- ===========================
      POPUP
 =========================== -->
@@ -1469,7 +1376,6 @@
     <p class="popup-body" id="popupBody"></p>
   </div>
 </div>
-
 <!-- ===========================
      JAVASCRIPT
 =========================== -->
@@ -1521,7 +1427,6 @@
       bg: 'linear-gradient(135deg, #0d2137 0%, #48cae4 100%)'
     }
   };
-
   /* ===========================
      POPUP FUNCTIONS
   =========================== */
@@ -1537,20 +1442,16 @@
     document.getElementById('popup').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-
   function closePopup() {
     document.getElementById('popup').classList.remove('open');
     document.body.style.overflow = '';
   }
-
   // Close popup on overlay click
   document.getElementById('popup').addEventListener('click', function(e) {
     if (e.target === this) closePopup();
   });
-
   // Close popup on Escape key
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closePopup(); });
-
   /* ===========================
      HEADER SCROLL
   =========================== */
@@ -1560,7 +1461,6 @@
     // Back to top visibility
     document.getElementById('back-top').classList.toggle('visible', window.scrollY > 400);
   }, { passive: true });
-
   /* ===========================
      PARALLAX HERO
   =========================== */
@@ -1570,13 +1470,11 @@
       heroBg.style.transform = `scale(1.05) translateY(${window.scrollY * 0.3}px)`;
     }
   }, { passive: true });
-
   /* ===========================
      HAMBURGER / MOBILE MENU
   =========================== */
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-
   hamburger.addEventListener('click', () => {
     const isOpen = hamburger.classList.toggle('open');
     hamburger.setAttribute('aria-expanded', isOpen);
@@ -1589,7 +1487,6 @@
       setTimeout(() => { mobileMenu.style.display = 'none'; }, 350);
     }
   });
-
   // Close mobile menu on link click
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', () => {
@@ -1598,19 +1495,16 @@
       setTimeout(() => { mobileMenu.style.display = 'none'; }, 350);
     });
   });
-
   /* ===========================
      DARK MODE TOGGLE
   =========================== */
   const themeToggle = document.getElementById('themeToggle');
   let isDark = false;
-
   themeToggle.addEventListener('click', () => {
     isDark = !isDark;
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
     themeToggle.textContent = isDark ? '☀️' : '🌙';
   });
-
   /* ===========================
      SCROLL REVEAL
   =========================== */
@@ -1621,11 +1515,9 @@
       }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-
   document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .timeline-item').forEach(el => {
     revealObserver.observe(el);
   });
-
   /* ===========================
      COUNTER ANIMATION
   =========================== */
@@ -1642,7 +1534,6 @@
       }
     }, 16);
   }
-
   // Trigger counters when stats section is visible
   const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1656,7 +1547,6 @@
     });
   }, { threshold: 0.4 });
   statsObserver.observe(document.getElementById('stats'));
-
   /* ===========================
      AUTO SLIDER
   =========================== */
@@ -1665,7 +1555,6 @@
   const dotsContainer = document.getElementById('sliderDots');
   let currentSlide = 0;
   let sliderInterval;
-
   // Build dots
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
@@ -1674,7 +1563,6 @@
     dot.addEventListener('click', () => goToSlide(i));
     dotsContainer.appendChild(dot);
   });
-
   function goToSlide(idx) {
     currentSlide = (idx + slides.length) % slides.length;
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -1682,28 +1570,23 @@
       d.classList.toggle('active', i === currentSlide);
     });
   }
-
   function startAutoSlide() {
     sliderInterval = setInterval(() => goToSlide(currentSlide + 1), 4500);
   }
   function stopAutoSlide() { clearInterval(sliderInterval); }
-
   document.getElementById('prevBtn').addEventListener('click', () => {
     stopAutoSlide(); goToSlide(currentSlide - 1); startAutoSlide();
   });
   document.getElementById('nextBtn').addEventListener('click', () => {
     stopAutoSlide(); goToSlide(currentSlide + 1); startAutoSlide();
   });
-
   startAutoSlide();
-
   /* ===========================
      BACK TO TOP
   =========================== */
   document.getElementById('back-top').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
   /* ===========================
      CONTACT FORM
   =========================== */
@@ -1717,13 +1600,11 @@
       btn.style.background = '';
     }, 3000);
   }
-
   /* ===========================
      ACTIVE NAV LINK
   =========================== */
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
-
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1734,8 +1615,9 @@
       }
     });
   }, { threshold: 0.4 });
-
   sections.forEach(s => navObserver.observe(s));
 </script>
 </body>
 </html>
+
+
